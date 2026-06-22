@@ -635,22 +635,22 @@
   .story-name { font-weight: 600; font-size: 0.85rem; color: var(--text); }
   .story-role { font-size: 0.75rem; color: var(--text3); }
 
-  /* ── WAITLIST ── */
-  .waitlist {
+  /* ── LIVE BETA ── */
+  .livebeta {
     padding: 7rem 1.5rem;
     text-align: center;
   }
 
-  .waitlist h2 {
+  .livebeta h2 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
     letter-spacing: -0.03em;
     color: var(--text);
     margin-bottom: 0.75rem;
   }
-  .waitlist h2 .accent { color: var(--orange); }
+  .livebeta h2 .accent { color: var(--orange); }
 
-  .waitlist p {
+  .livebeta p {
     color: var(--text2);
     font-size: 0.95rem;
     margin-bottom: 2.5rem;
@@ -660,7 +660,7 @@
     line-height: 1.7;
   }
 
-  .waitlist-form {
+  .livebeta-form {
     display: flex;
     gap: 8px;
     max-width: 420px;
@@ -669,7 +669,7 @@
     justify-content: center;
   }
 
-  .waitlist-form input {
+  .livebeta-form input {
     flex: 1;
     min-width: 210px;
     padding: 13px 16px;
@@ -682,10 +682,10 @@
     outline: none;
     transition: border-color 0.2s;
   }
-  .waitlist-form input::placeholder { color: var(--text3); }
-  .waitlist-form input:focus { border-color: var(--orange); }
+  .livebeta-form input::placeholder { color: var(--text3); }
+  .livebeta-form input:focus { border-color: var(--orange); }
 
-  .waitlist-form button {
+  .livebeta-form button {
     padding: 13px 22px;
     background: var(--orange);
     color: #fff;
@@ -698,9 +698,9 @@
     transition: background 0.2s;
     white-space: nowrap;
   }
-  .waitlist-form button:hover { background: var(--orange2); }
+  .livebeta-form button:hover { background: var(--orange2); }
 
-  .waitlist-note { font-size: 0.75rem; color: var(--text3); }
+  .livebeta-note { font-size: 0.75rem; color: var(--text3); }
 
   .success-msg {
     display: none;
@@ -1043,11 +1043,11 @@
 </section>
 
 <!-- GET STARTED -->
-<section class="waitlist" id="get-started">
+<section class="Live Beta" id="get-started">
   <p class="section-eyebrow">Live Beta</p>
   <h2>Start <span class="accent">creating</span> today.</h2>
   <p>Genobby is officially deployed! We are currently in our early stages—actively adding new features and refining the experience. Log in now to explore what is working, test the waters, and help us shape the future of the platform.</p>
-  <div class="waitlist-form">
+  <div class="livebeta-form">
     <button onclick="window.location.href='https://genobby.vercel.app/login'">Launch Genobby</button>
   </div>
 </section>
@@ -1066,7 +1066,7 @@
 </footer>
 
 <script>
-function handleWaitlist() {
+function handlellivebeta() {
   const input = document.getElementById('emailInput');
   const msg = document.getElementById('successMsg');
   const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
@@ -1077,11 +1077,11 @@ function handleWaitlist() {
   }
   input.style.borderColor = '#5cb85c';
   input.disabled = true;
-  document.querySelector('.waitlist-form button').disabled = true;
+  document.querySelector('.livebeta-form button').disabled = true;
   msg.style.display = 'block';
 }
 document.getElementById('emailInput').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') handleWaitlist();
+  if (e.key === 'Enter') handlelivebeta();
   this.style.borderColor = 'var(--border)';
 });
 </script>
